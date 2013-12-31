@@ -42,15 +42,15 @@ var force = d3.layout.force()
     .size([width, height])
     .distance(function(obj){
       if ( obj.target.weight == 4){
-        return 100
+        return 150
       }
       else if ( obj.target.weight == 3){
-        return 100
+        return 150
       }
       else if ( obj.target.weight == 2){
         return 200
       } else if ( obj.target.weight == 1){
-        return 300
+        return 350
       } 
     })
     .charge(-50)

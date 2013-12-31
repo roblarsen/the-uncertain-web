@@ -1,34 +1,64 @@
 {
- "name": "Trade Connect Servers",
+ "name": "Trees",
  "size":24000,
  "weight":10000,
  "children": [{
-   "name": "FIX OMS",
+   "name": "Shaftoe",
    "size":12000, 
   "weight":500,
    "children": [
-    {"name": "FIX OMS-EQ", "size": 6000, 
+    {"name": "Bobby", "size": 6000, 
       "children" : [
-        {"name":"OMSEQ1","size":4000, "status" : "green"},
-        {"name":"OMSEQ2","size":4000, "status" : "red"}
+        {"name":"America","size":4000, "status" : "green"},
+        {"name":"Douglas MacArthur","size":4000, "status" : "green"}
       ]},
-      {"name": "FIX OMS-FI", "size": 6000},
-      {"name": "FIX OMS-EQ2", "size": 6000}
-     ]
+      {"name": "Jack", "size": 6000, 
+      "children" : [
+        {"name":"Bob","size":4000, "status" : "green"}]}  ]
     
     },
     {
-     "name": "FIX ALLOC",
+     "name": "Waterhouse",
        "size": 12000,
         "weight":500,
      "children": [
-      {"name": "OMSFX1", "size": 4000,"status" : "red"}
+      {"name": "Daniel", "size": 4000,"status" : "green"},
+	  
+      {"name": "Lawrence", "size": 4000,"status" : "green"},
+	  
+      {"name": "Randy", "size": 4000,"status" : "green"}
      ]
     },
     {
        "weight":500,
-     "name": "FIX IOI",
+     "name": "Dengo",
+       "size":12000,
+     "children": [
+      {"name": "Gabriel", "size": 4000,"status" : "green"},
+	  
+      {"name": "Goto", "size": 4000,"status" : "green"},
+	  
+      {"name": "Ferdinand", "size": 4000,"status" : "green"}
+     ]
+	   
+    },
+	{
+       "weight":500,
+     "name": "Root",
        "size":12000
+	   
+    },{
+       "weight":500,
+     "name": "Hacklheber",
+       "size":12000,
+     "children": [
+      {"name": "Eliza", "size": 4000,"status" : "green", "children" : [{"name":"Johann","size":"2000","status":"green"}]},
+	  
+      {"name": "Rudolf", "size": 4000,"status" : "green"},
+	  
+      {"name": "House", "size": 4000,"status" : "green"}
+     ]
+	   
     }
    ]
 }
