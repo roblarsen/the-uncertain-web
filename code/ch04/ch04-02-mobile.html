@@ -15,5 +15,12 @@
     </head>
     <body>
         <h1>You've Got a Mobile Device</h1>
-</body>
+        <p><a href="ch04-02.html" id="switch">Go to the desktop version</a></p>
+        <script>
+            document.getElementById("switch").addEventListener("click",function(){
+                sessionStorage.setItem("view","desktop");
+                window.location = this.href;
+            });
+        </script>
+    </body>
 </html>
