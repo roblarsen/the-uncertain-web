@@ -5,7 +5,14 @@
   max-width:80em;
 }
 main {
-	display:flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex; 
+	-o-flex-flow:row;
+	-moz-flex-flow: row;
+    -ms-flex-flow:row;
 	-webkit-flex-flow: row;
     flex-flow: row;
 }
@@ -20,11 +27,29 @@ aside {
 	padding:1em;
 	
 }
-@media all and (max-width: 48em) {
+header h1 {
+	line-height:2em;
+}
+header {
+	background-image: url(responsive-header.jpg);
+	background-size:100%;
+	background-repeat:no-repeat;
+	background-color:#000;
+	height:32.1875em;
+	color:#fff;
+	background-position:bottom;
+}
+/*
+Major breakpoint
+*/
+@media all and (max-width: 40em) {
   
    main {
-    -webkit-flex-flow: column;
-            flex-flow: column;
+	-o-flex-flow:column;
+	-moz-flex-flow: column;
+    -ms-flex-flow:column;
+	-webkit-flex-flow: column;
+    flex-flow: column;
             flex-direction: column;
    }
    article {
@@ -32,6 +57,47 @@ aside {
 	}
 	aside {
 	width:100%;
+}
+
+header {
+	color:#000;
+	background-color:#fff;
+	border:1px solid #000;
+	text-align:center;
+}
 	
 }
+
+/* 
+Minor breakpoints
+*/
+@media all and (min-width: 64em) and (max-width: 72em) {
+header {
+height:30em;
+}
+}
+@media all and (min-width: 48em) and (max-width: 64em) {
+header {
+height:24em;
+}
+}
+@media all and (min-width: 40em) and (max-width: 48em) {
+header {
+height:18em;
+}
+}
+@media all and (min-width: 32em) and (max-width: 40em) {
+header {
+	background-image:url(responsive-header-thin.jpg);
+	height:42em;
+}
+}
+
+@media all and (max-width: 32em) {
+  header {
+	background-image:url(responsive-header-super-thin.jpg);
+	height:24em;
+	background-size:auto;
+  }
+	
 }
