@@ -29,8 +29,10 @@ aside {
 }
 header h1 {
 	line-height:2em;
+	margin:0;
 }
 header {
+	padding:.2em 1em;
 	background-image: url(responsive-header.jpg);
 	background-size:100%;
 	background-repeat:no-repeat;
@@ -90,6 +92,8 @@ height:18em;
 header {
 	background-image:url(responsive-header-thin.jpg);
 	height:42em;
+	background-position:center;
+	padding:.1em .5em;
 }
 }
 
@@ -98,6 +102,10 @@ header {
 	background-image:url(responsive-header-super-thin.jpg);
 	height:24em;
 	background-size:auto;
+	padding:.1em .2em;
+  }
+  header h1 {
+	font-size:1em;
   }
 	
 }
