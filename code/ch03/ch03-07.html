@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+        <script src="modernizr.custom.52324.js"></script>
+    </head>
+    <body>
+        <h1>The Uncertain Web</h1>
+        <div id="svg"></div>
+        <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          if (Modernizr.svg){
+            $("#svg").load("circle.svg");
+            $("#svg").on("click","circle",function(){
+              $(this).attr("fill","#003366")
+            })
+          } else {
+            $("#svg").append("<img src='circle.png'>");
+             $("#svg img").on("click",function(){
+              $(this).attr("src","circle-blue.png")
+            })
+          }
+        })
+        </script>
+    </body>
+</html>
