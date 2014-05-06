@@ -1,5 +1,6 @@
 @charset "utf-8";
 .container {
+	margin:auto;
 	width: 100%;
 	max-width: 80em;
 }
@@ -28,16 +29,17 @@ aside {
 header h1 {
 	line-height: 2em;
 	margin: 0;
+	text-shadow: 1px 1px 3px #888;
 }
 header {
 	padding: .2em 1em;
 	background-image: url(responsive-header.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-color: #000;
+	background-color: #2492b4;
 	height: 32.1875em;
 	color: #fff;
-	background-position: bottom;
+	background-position: top;
 }
 /*
 Major breakpoint
@@ -58,10 +60,10 @@ aside {
 	width: 100%;
 }
 header {
-	color: #000;
-	background-color: #fff;
 	border: 1px solid #000;
 	text-align: center;
+	background-color:#0d9c2b;
+
 }
 }
 
@@ -97,6 +99,7 @@ header {
 	height: 24em;
 	background-size: auto;
 	padding: .1em .2em;
+	background-position:bottom;
 }
 header h1 {
 	font-size: 1em;
