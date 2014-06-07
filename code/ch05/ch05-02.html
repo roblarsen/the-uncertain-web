@@ -46,9 +46,9 @@ var now, later;
   document.getElementById("spy").addEventListener('touchstart', function(e){
     now = Date.now();
   }, false);
-  document.getElementById("spy").addEventListener('touchstart', function(e){
+  document.getElementById("spy").addEventListener('click', function(e){
     later = Date.now();
-    document.getElementById("reporter").innerHTML += "<p>Delay:"+(now-later)+"ms</p>"
+    document.getElementById("reporter").innerHTML += "<p>Delay:"+(later-now)+"ms</p>"
   }, false);
 }, false);
 </script>
