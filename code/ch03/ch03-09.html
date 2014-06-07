@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><head>
+        <meta charset="utf-8">
+        <title>The Uncertain Web Code Samples</title>
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+        <script src="modernizr.custom.05753.js"></script>
+
+    </head>
+    <body>
+        <h1>The Uncertain Web</h1>
+        <h2></h2>
+        <script src="../_assets/js/vendor/jquery-1.10.2.min.js"></script>
+
+        <script>
+            function maxWidthtest(){
+                if (Modernizr.mq('all and (max-width: 768px)')){
+                    $("h2").text("less than 768px");
+                } else {    
+                    $("h2").text("greater than 768px");
+                }
+            }
+            $(document).ready(maxWidthtest);
+            $(window).on("resize",maxWidthtest);
+        </script>
+</body></html>

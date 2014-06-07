@@ -1,0 +1,16 @@
+h2 .shivved {
+    display:none;
+}
+h2 .notshivved {
+    display:inline;
+}
+article h2 .shivved{
+    display:inline;
+}
+article h2 .notshivved {
+    display:none;
+}
+
+article h2 {
+    color:green;
+}

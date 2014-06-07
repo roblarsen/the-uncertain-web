@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+      <style>
+      #spy{
+        width:400px;
+        height:200px;
+        background: #006699;
+        color:#fff;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 200px;
+        text-transform: uppercase;
+        font-size: 48px;
+      }
+      #reporter {
+        overflow: auto;
+        height:200px;
+        width: 400px;
+        border: 1px solid #666;
+        padding: 20px;
+      }
+      #reporter p{
+        font-size: 12px;
+        line-height:1;
+        margin:0;
+      }
+      </style>
+    </head>
+    <body>
+<div id="spy"><p>Tap here</p></div>
+<div id="reporter"></div>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  var events = [
+  'touchstart',
+  'touchmove',
+  'touchend',
+  'touchenter',
+  'touchleave',
+  'touchcancel',
+  'mouseover',
+  'mousemove',
+  'mouseout',
+  'mouseenter',
+  'mouseleave',
+  'mousedown',
+  'mouseup',
+  'focus',
+  'blur',
+  'click'
+  ];
+  for (var i=0; i<events.length; i++) {
+    document.getElementById("spy").addEventListener(events[i], function(e){
+     document.getElementById("reporter").innerHTML += "<p>"+e.type+"</p>"
+    }, false);
+  }
+}, false);
+</script>
+    </body>
+</html>
