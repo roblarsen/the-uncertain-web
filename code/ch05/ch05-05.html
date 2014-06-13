@@ -5,42 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>The Uncertain Web Code Samples</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="viewport" content="user-scalable=no">
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="../_assets/css/normalize.css">
         <link rel="stylesheet" href="../_assets/css/main.css">
-      <link rel="stylesheet" href="spy.css">
+        <link rel="stylesheet" href="spy.css">
     </head>
     <body>
 <div id="spy"><p>Tap here</p></div>
 <div id="reporter"></div>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-  var events = [
-  'touchstart',
-  'touchmove',
-  'touchend',
-  'touchenter',
-  'touchleave',
-  'touchcancel',
-  'mouseover',
-  'mousemove',
-  'mouseout',
-  'mouseenter',
-  'mouseleave',
-  'mousedown',
-  'mouseup',
-  'focus',
-  'blur',
-  'click'
-  ];
-  for (var i=0; i<events.length; i++) {
-    document.getElementById("spy").addEventListener(events[i], function(e){
-     document.getElementById("reporter").innerHTML += "<p>"+e.type+"</p>"
-    }, false);
+  function beltAndSuspenders(e){
+    e.preventDefault();
+    if (this.className === "toggled"){
+      this.className="";
+    } else {
+      this.className = "toggled";
+    }
+    document.getElementById("reporter").innerHTML += "<p>"+e.type+"</p>"
   }
+  document.getElementById("spy").addEventListener('touchstart', beltAndSuspenders, false);
+  document.getElementById("spy").addEventListener('click', beltAndSuspenders, false);
 }, false);
 </script>
     </body>
