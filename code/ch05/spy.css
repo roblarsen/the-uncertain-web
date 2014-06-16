@@ -1,4 +1,7 @@
-
+    canvas {
+      -ms-touch-action: none;
+      touch-action: none;
+    }
       #spy{
         width:400px;
         height:200px;

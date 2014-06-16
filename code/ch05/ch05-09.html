@@ -36,23 +36,11 @@ function circle( params ) {
     }
     ctx.closePath();
   }
+
   function bubble(e){
-    e.preventDefault();
-    var x,y;
-    if (e.touches){
-      for (var i = 0, len = e.touches.length; i < len; i++){
-        x = e.touches[i].clientX;
-        y = e.touches[i].clientY;
-        circle({x:x,y:y,radius:20 * Math.random()  ,fillStyle:randomHex()});  
-      }
-    } else {
-      x = e.clientX;
-      y = e.clientY;
-      circle({x:x,y:y,radius:20 * Math.random()  ,fillStyle:randomHex()})
-    }
+    circle({x:e.clientX,y:e.clientY,radius:20 * Math.random()  ,fillStyle:randomHex()})
   }
-  canvas.addEventListener('mousemove', bubble, false);
-  canvas.addEventListener('touchmove', bubble, false);
+  canvas.addEventListener('pointermove', bubble, false);
   document.getElementById("reset")
     .addEventListener('click', function(){
       ctx.clearRect( 0, 0, 1024, 768 );
