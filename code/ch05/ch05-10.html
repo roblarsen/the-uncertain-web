@@ -41,8 +41,6 @@ function circle( params ) {
   }
 
   function bubble(e){
-    console.log(e);
-    e.preventDefault();
     circle({x:e.clientX,y:e.clientY,radius:20 * Math.random()  ,fillStyle:randomHex()})
   }
   canvas.addEventListener('pointermove', bubble, false);
