@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.widescreen article {
+	width:100%;
+	max-width:1600px;
+	min-width:960px;
+}
+.widescreen article img {
+	max-width:100%;
+	margin-bottom:25px;
+}
+.widescreen article p,
+.widescreen article h1 {
+	width:700px;
+	margin:auto;
+}
+.smallscreen article {
+	width:100%;
+	max-width:480px;
+	min-width:240px;
+}
+.smallscreen article img {
+	max-width:100%;
+	margin-bottom:19px;
+}
+.widescreen article p,
+.widescreen article h1 {
+	width:100%;
+	padding:1%;
+}

@@ -1,4 +1,7 @@
-
+    canvas {
+      -ms-touch-action: none;
+      touch-action: none;
+    }
       #spy{
         width:400px;
         height:200px;
@@ -9,6 +12,9 @@
         line-height: 200px;
         text-transform: uppercase;
         font-size: 48px;
+      }
+      #spy.toggled{
+        background: #996600;
       }
       #reporter {
         overflow: auto;
@@ -21,4 +27,15 @@
         font-size: 12px;
         line-height:1;
         margin:0;
+      }
+      #track{
+        position:absolute;
+        left:0;
+        top:0;
+        border:1px solid #ccc;
+      }
+      #reset {
+        position: absolute;
+        left:1030px;
+        top:20px;
       }

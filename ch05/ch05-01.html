@@ -11,21 +11,36 @@
 
         <link rel="stylesheet" href="../_assets/css/normalize.css">
         <link rel="stylesheet" href="../_assets/css/main.css">
-        <link rel="stylesheet" href="spy.css">
+      <link rel="stylesheet" href="spy.css">
     </head>
     <body>
 <div id="spy"><p>Tap here</p></div>
-<div id="reporter"></div>
+<div id="reporter" style="height:400px;"></div>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-var now, later;    
-  document.getElementById("spy").addEventListener('touchstart', function(e){
-    now = Date.now();
-  }, false);
-  document.getElementById("spy").addEventListener('click', function(e){
-    later = Date.now();
-    document.getElementById("reporter").innerHTML += "<p>Delay:"+(later-now)+"ms</p>"
-  }, false);
+  var events = [
+  'touchstart',
+  'touchmove',
+  'touchend',
+  'touchenter',
+  'touchleave',
+  'touchcancel',
+  'mouseover',
+  'mousemove',
+  'mouseout',
+  'mouseenter',
+  'mouseleave',
+  'mousedown',
+  'mouseup',
+  'focus',
+  'blur',
+  'click'
+  ];
+  for (var i=0; i<events.length; i++) {
+    document.getElementById("spy").addEventListener(events[i], function(e){
+     document.getElementById("reporter").innerHTML += "<p>"+e.type+"</p>"
+    }, false);
+  }
 }, false);
 </script>
     </body>

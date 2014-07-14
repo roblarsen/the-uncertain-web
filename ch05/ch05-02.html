@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+     <link rel="stylesheet" href="spy.css">
+    </head>
+    <body>
+<div id="spy"><p>Tap here</p></div>
+<div id="reporter"></div>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+var now, later;    
+  document.getElementById("spy").addEventListener('touchstart', function(e){
+    now = Date.now();
+  }, false);
+  document.getElementById("spy").addEventListener('touchstart', function(e){
+    later = Date.now();
+    document.getElementById("reporter").innerHTML += "<p>Delay:"+(now-later)+"ms</p>"
+  }, false);
+}, false);
+</script>
+    </body>
+</html>
