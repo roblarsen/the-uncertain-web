@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+.svg {
+	width:100%;
+}
+@media all and (min-width: 1024px) {
+	.svg{
+		width:50%;
+	}
+}
