@@ -11,13 +11,24 @@
 
         <link rel="stylesheet" href="../_assets/css/normalize.css">
         <link rel="stylesheet" href="../_assets/css/main.css">
-        <link rel="stylesheet" href="img.css">
-    </head>
-    <body class="widescreen images">
-    <article>
-			<img src="tuscon-wide.jpg">
-    	<h1>Tuscon, How About that Place?</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus pellentesque mi, sed vehicula erat congue eu. Nulla vehicula nec quam ut lacinia. Fusce viverra, turpis nec condimentum consequat, elit felis accumsan magna, vitae iaculis nulla elit a augue. Donec tincidunt sapien nibh, sed tincidunt tortor egestas eu. Suspendisse non sodales massa. Donec auctor sodales faucibus. Praesent dictum dolor vel ipsum blandit, sit amet aliquam neque laoreet. Integer eros mi, viverra id nibh non, blandit interdum tellus. Donec in lacus nulla.</p>
-    </article>
+     </head>
+    <body class="video">
+      	<video src="MVI_1749.mp4" controls autoplay
+        id="video-sample" width="854" height="504">
+        your browser does not support the video tag </video>
+      <button id="video-toggle">Pause/Play</button>
+			<script>
+      var video = document.getElementById("video-sample"),
+         toggle = document.getElementById("video-toggle");
+      toggle.onclick = function() {
+        if (video.paused) {
+          video.play();
+          toggle.className="playing"
+        } else {
+          video.pause();
+          toggle.className="paused"
+        }
+      };
+      </script>
     </body>
 </html>

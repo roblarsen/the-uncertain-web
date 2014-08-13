@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+         <link href="video-js/video-js.css" rel="stylesheet">
+			  <script src="video-js/video.js"></script>
+				<script>
+    			videojs.options.flash.swf = "video-js/video-js.swf";
+  			</script>
+     </head>
+    <body class="video">
+      	<video class="video-js vjs-default-skin" controls
+        	preload="none" id="video-sample" width="854" height="504"
+          poster="MVI_1749_1.png"
+          data-setup="{}">
+          <source src="MVI_1749.webm" type="video/webm">
+          <source src="MVI_1749.ogv" type="video/ogg">
+          <source src="MVI_1749.mp4" type="video/mp4">
+          <img src="MVI_1749_1.png" width="854" height="480" alt="Video"  class="vjs-no-js">
+          <p class="vjs-no-js">Your browser can't play HTML5 video. <a href="MVI_1749.mp4">Download it</a> instead.</p>
+        </video>
+        <button id="video-toggle">Pause/Play</button>
+			  <script>
+				videojs("video-sample").ready(function(){
+					var player = this,
+					toggle = document.getElementById("video-toggle");
+      		toggle.onclick = function() {
+        		if (player.paused()) {
+          		player.play();
+          		toggle.className="playing"
+        		} else {
+          		player.pause();
+          		toggle.className="paused"
+        		}
+      		};
+				});
+        </script>
+    </body>
+</html>
