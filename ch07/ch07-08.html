@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+     </head>
+    <body class="video">
+    
+    	<iframe id="player" src="//player.vimeo.com/video/103677495?api=1&amp;player_id=player" 
+      	width="500" height="281" frameborder="0" 
+        webkitallowfullscreen mozallowfullscreen 
+        allowfullscreen></iframe>
+         <p><button id="video-toggle">Pause/Play</button></p>
+     
+        <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script>
+    			var player = $f(document.getElementById("player"));
+					var paused=true;
+			  	var toggle = document.getElementById("video-toggle");
+					player.addEvent('ready', function() {
+        			player.addEvent('pause', function() {
+    						paused=true;
+								console.log(paused);
+							});
+							player.addEvent('finish', function() {
+    						paused=true;
+							});
+							player.addEvent('playProgress', function() {
+    						paused=false;
+							});
+					});
+					toggle.addEventListener("click", function() {
+						if (paused) {
+							player.api("play");
+							toggle.className="playing"
+						} else {
+							player.api("pause");
+							toggle.className="paused"
+						}
+					});
+   </script>
+
+  </body>
+</html>

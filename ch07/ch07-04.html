@@ -33,7 +33,7 @@
 				videojs("video-sample").ready(function(){
 					var player = this,
 					toggle = document.getElementById("video-toggle");
-      		toggle.onclick = function() {
+      		toggle.addEventListener("click", function() {
         		if (player.paused()) {
           		player.play();
           		toggle.className="playing"
@@ -41,7 +41,7 @@
           		player.pause();
           		toggle.className="paused"
         		}
-      		};
+      		});
 				});
         </script>
     </body>

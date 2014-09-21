@@ -20,7 +20,7 @@
 			<script>
       var video = document.getElementById("video-sample"),
          toggle = document.getElementById("video-toggle");
-      toggle.onclick = function() {
+      toggle.addEventListener("click", function() {
         if (video.paused) {
           video.play();
           toggle.className="playing"
@@ -28,7 +28,7 @@
           video.pause();
           toggle.className="paused"
         }
-      };
+      });
       </script>
     </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Uncertain Web Code Samples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../_assets/css/normalize.css">
+        <link rel="stylesheet" href="../_assets/css/main.css">
+     </head>
+    <body class="video">
+    	<iframe id="player" width="560" height="315" src="//www.youtube.com/embed/rLaa6q_Cbmc?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      <p><button id="video-toggle">Pause/Play</button></p>
+      <script src="//www.youtube.com/iframe_api"></script>
+      <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {});
+				}	
+     		toggle = document.getElementById("video-toggle");
+  			toggle.addEventListener("click", function() {
+					console.log(player.getPlayerState());
+    			if (player.getPlayerState() === 2 || player.getPlayerState() === 5 ) {
+      			player.playVideo();
+      			toggle.className="playing"
+    			} else {
+      			player.pauseVideo();
+      			toggle.className="paused"
+    			}
+  			});
+   </script>
+  </body>
+</html>
