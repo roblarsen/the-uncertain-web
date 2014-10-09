@@ -28,7 +28,6 @@
 					player.addEvent('ready', function() {
         			player.addEvent('pause', function() {
     						paused=true;
-								console.log(paused);
 							});
 							player.addEvent('finish', function() {
     						paused=true;
@@ -40,10 +39,8 @@
 					toggle.addEventListener("click", function() {
 						if (paused) {
 							player.api("play");
-							toggle.className="playing"
 						} else {
 							player.api("pause");
-							toggle.className="paused"
 						}
 					});
    </script>

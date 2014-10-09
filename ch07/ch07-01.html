@@ -19,14 +19,12 @@
 				<p><button id="video-toggle">Pause/Play</button></p>
 			<script>
       var video = document.getElementById("video-sample"),
-         toggle = document.getElementById("video-toggle");
+          toggle = document.getElementById("video-toggle");
       toggle.addEventListener("click", function() {
         if (video.paused) {
           video.play();
-          toggle.className="playing"
         } else {
           video.pause();
-          toggle.className="paused"
         }
       });
       </script>
